@@ -31,9 +31,8 @@ class Servicio(Entidad):
     def calcular_total(self, cantidad, precio):
         total = cantidad * precio
         return total - (total * self._descuento / 100) + (
-            (total - (total * self._descuento / 100)) * self._impuesto
-        )
-
+        (total - (total * self._descuento / 100)) * self._impuesto
+    )
     def mostrar_informacion(self):
         return f"Servicio: {self.nombre} | Cantidad: {self.cantidad}"
 
